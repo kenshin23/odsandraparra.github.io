@@ -109,6 +109,22 @@
             color: var(--white);
             filter: brightness(1.1);
         }
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--white);
+            padding: 16px 40px;
+            border-radius: 50px;
+            border: 2px solid var(--white);
+            font-weight: 600;
+            transition: 0.4s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-secondary:hover {
+            background-color: var(--white);
+            color: var(--purple-main);
+            transform: translateY(-5px);
+        }
 
         /* --- SERVICIOS GLASS --- */
         .services-section { background-color: var(--violet-light); padding: 100px 0; }
@@ -212,7 +228,10 @@
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <h1 class="display-3 mb-4">Sonríe a <br><span>plenitud.</span></h1>
                     <p class="lead mb-5 opacity-75" style="font-weight: 300;">Cuidado dental de vanguardia con un enfoque estético y profesional para toda la familia en Mérida.</p>
-                    <a href="#contacto" class="btn-appointment">Agenda tu cita hoy</a>
+                    <div class="d-flex flex-column flex-sm-row gap-3">
+                        <a href="https://linktr.ee/od.sandraparra?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnyvF9_fPK_XZsJGjIwDVTTeo9eohNIJfYEaDeQv1OgwmmBaOF3FZFAtoVR3k_aem_KpYr-Eq7DV4jQN1IpJ8kjA" target="_blank" class="btn-appointment">Agenda tu cita online</a>
+                        <a href="#contacto" class="btn-secondary">Contáctanos</a>
+                    </div>
                 </div>
                 <div class="col-lg-6 text-center hero-img-container">
                     <img src="foto-sandra-hero.png" alt="Dra. Sandra Parra">
