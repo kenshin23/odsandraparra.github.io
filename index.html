@@ -224,6 +224,35 @@
         .text-justify { text-align: justify; }
         .section-label { color: var(--gold-accent); letter-spacing: 4px; font-weight: 600; }
 
+        /* --- DECORATIVE ELEMENTS --- */
+        .hero-wave-1 {
+            position: absolute; top: 15%; left: 5%; width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+            border-radius: 55% 45% 65% 35%; z-index: 1;
+        }
+        .hero-wave-2 {
+            position: absolute; bottom: 10%; right: 15%; width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(197, 160, 89, 0.12) 0%, transparent 65%);
+            border-radius: 65% 35% 45% 55%; z-index: 1;
+        }
+        .hero-wave-svg {
+            position: absolute; bottom: 0; left: 0; width: 100%; height: 120px; z-index: 1;
+        }
+
+        /* --- MAP EMBED --- */
+        .map-container {
+            position: relative; width: 100%; height: 0; padding-bottom: 75%;
+            border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .map-iframe {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
+        }
+
+        /* --- FOOTER --- */
+        footer { padding: 80px 0; }
+        .footer-copyright { font-size: 1rem; }
+        .footer-location { font-size: 0.85rem; letter-spacing: 2px; margin-top: 15px; }
+
         @media (max-width: 768px) {
             .display-3 { font-size: 2.8rem; text-align: center; }
             .hero { text-align: center; border-bottom-right-radius: 60px; padding-top: 40px; }
@@ -260,8 +289,8 @@
 
     <section class="hero" id="inicio">
         <!-- Additional decorative waves -->
-        <div style="position: absolute; top: 15%; left: 5%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 60%); border-radius: 55% 45% 65% 35%; z-index: 1;" aria-hidden="true"></div>
-        <div style="position: absolute; bottom: 10%; right: 15%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(197, 160, 89, 0.12) 0%, transparent 65%); border-radius: 65% 35% 45% 55%; z-index: 1;" aria-hidden="true"></div>
+        <div class="hero-wave-1" aria-hidden="true"></div>
+        <div class="hero-wave-2" aria-hidden="true"></div>
 
         <div class="container">
             <div class="row align-items-center">
@@ -280,7 +309,7 @@
         </div>
 
         <!-- SVG Wave bottom -->
-        <svg style="position: absolute; bottom: 0; left: 0; width: 100%; height: 120px; z-index: 1;" preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
+        <svg class="hero-wave-svg" preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
             <path d="M0,60 C300,100 600,20 900,60 C1050,85 1150,60 1200,60 L1200,120 L0,120 Z" fill="rgba(244, 240, 247, 0.4)"></path>
         </svg>
     </section>
@@ -385,9 +414,9 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="ps-lg-5">
-                        <div style="position: relative; width: 100%; height: 0; padding-bottom: 75%; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                        <div class="map-container">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4921.080989025987!2d-71.16026542408984!3d8.587949691456856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e648758e25b4bff%3A0xca00d760ff1e6dd9!2sOdont%C3%B3logo%20Sandra%20Parra!5e1!3m2!1ses-419!2sve!4v1766188182174!5m2!1ses-419!2sve"
-                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+                                class="map-iframe"
                                 title="Ubicación de la clínica Odontólogo Sandra Parra en Mérida"
                                 allowfullscreen=""
                                 loading="lazy"
@@ -400,11 +429,11 @@
         </div>
     </section>
 
-    <footer class="text-center bg-white" style="padding: 80px 0;">
+    <footer class="text-center bg-white">
         <div class="container">
             <img src="logo.svg" alt="Logo" class="footer-logo" loading="lazy">
-            <p class="text-muted mb-2" style="font-size: 1rem;">&copy; 2025 Dra. Sandra Parra. Todos los derechos reservados.</p>
-            <p class="text-muted" style="font-size: 0.85rem; letter-spacing: 2px; margin-top: 15px;">MÉRIDA, VENEZUELA</p>
+            <p class="text-muted mb-2 footer-copyright">&copy; 2025 Dra. Sandra Parra. Todos los derechos reservados.</p>
+            <p class="text-muted footer-location">MÉRIDA, VENEZUELA</p>
         </div>
     </footer>
 
